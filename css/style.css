@@ -1,0 +1,144 @@
+/*Global*/
+*, *::before, *::after {
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 1.7;
+  background-color: #dfe6e9;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 50px 0;
+}
+
+/*intro*/
+.cursor {
+  opacity: 0;
+  transition: .2s;
+}
+
+.cursor.active {
+  opacity: 1;
+}
+
+.textTwo {
+  font-size: 20px;
+}
+
+/*Editor*/
+.page-subtitle {
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.first {
+  max-width: 50vw;
+  text-align: left;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex: 7;
+      flex: 7;
+  border: 1px solid black;
+}
+
+.second {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  text-align: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex: 3;
+      flex: 3;
+  border: 1px solid black;
+}
+
+.buttons {
+  -ms-flex: 1;
+      flex: 1;
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+button i {
+  font-size: 20px;
+}
+
+/*button*/
+.btn {
+  width: 12vw;
+  padding: 8px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid black;
+  font-weight: bold;
+  background: linear-gradient(90deg, #e74c3c 50%, transparent 50%);
+  background-position: 100% 0;
+  background-size: 300%;
+  transition: all 1s;
+}
+
+.btn:hover {
+  background-position: 0 100%;
+}
+
+.btn-two {
+  border: 1px solid white;
+  color: white;
+}
+
+/*About me*/
+.intro p {
+  margin: 0 auto;
+  width: 70%;
+  padding: 48px 0;
+  font-size: 20px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.code {
+  font-style: italic;
+}
+
+/*Footer*/
+footer {
+  background-color: #dfe6e9;
+  margin: 0;
+}
+
+/*Media*/
+@media (max-width: 767px) {
+  .golden {
+    display: none;
+  }
+  .btn {
+    font-size: 10px;
+  }
+  .row {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+}
+/*# sourceMappingURL=style.css.map */

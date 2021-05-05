@@ -1,0 +1,145 @@
+/*Global*/
+$color-one: #e74c3c;
+$color-two: #dfe6e9;
+$font-text: 'Noto Serif', sans-serif;
+$font-header:'Oxygen', sans-serif;
+$font-three: 'Yellowtail', cursive;
+$transition: all 1s;
+
+*, *::before, *::after {
+box-sizing: border-box;
+text-align: center;
+line-height: 1.7;
+background-color: $color-two;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 50px 0;
+}
+
+/*intro*/
+
+.cursor {
+ opacity: 0;
+ transition: .2s;
+}
+
+.cursor.active {
+ opacity: 1;
+}
+
+.textTwo {
+  font-size: 20px;
+}
+
+/*Editor*/
+
+.page-subtitle {
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+
+.row {
+display: flex;
+justify-content: space-between;
+}
+
+.first {
+  max-width: 50vw;
+  text-align: left;
+  align-items: center;
+  flex: 7;
+  border: 1px solid black;
+}
+
+.second {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  flex: 3;
+  border: 1px solid black;
+}
+
+.buttons {
+  flex: 1;
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+button i {
+  font-size: 20px;
+}
+/*button*/
+
+.btn {
+  width: 12vw;
+  padding: 8px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid black;
+  font-weight: bold;
+  background: linear-gradient(90deg, $color-one 50%, transparent 50%);
+  background-position: 100% 0;
+  background-size: 300%;
+  transition: $transition;
+}
+
+  .btn:hover {
+    background-position: 0 100%;
+}
+
+.btn-two {
+  border: 1px solid white;
+  color: white;
+}
+
+
+/*About me*/
+
+.intro p {
+    margin: 0 auto;
+    width: 70%;
+    padding: 48px 0;
+    font-size: 20px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.code {
+  font-style: italic;
+}
+
+/*Footer*/
+
+footer {
+  background-color: $color-two;
+  margin: 0;
+}
+
+/*Media*/
+@media (max-width: 767px) {
+  .golden {
+    display: none;
+  }
+  .btn {
+    font-size: 10px;
+  }
+  .row {
+    flex-direction: column;
+  }
+}
