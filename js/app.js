@@ -1,4 +1,4 @@
-'use strict';
+  'use strict';
 
 const spnCursorOne = document.querySelector('.cursorOne');
 const spnCursorTwo = document.querySelector('.cursorTwo');
@@ -98,26 +98,32 @@ let actives = {
 
 
 btnBold.addEventListener('click', () => {
-  console.log('działa bold');
+  // console.log('działa bold');
   if(actives.bold === false){
   editor.innerHTML = editor.textContent.bold();
   actives.bold = true;
+  console.log(actives);
 
 } else if(actives.bold === true){
   editor.innerHTML = editor.textContent;
   actives.bold = false;
+  console.log(actives);
+
 }
 });
 
 btnItalic.addEventListener('click', () => {
-  console.log('działa ital');
+  // console.log('działa ital');
   if(actives.italic === false) {
   editor.innerHTML = editor.textContent.italics();
   actives.italic = true;
+  console.log(actives);
 
 } else if(actives.italic === true) {
   editor.innerHTML = editor.textContent;
   actives.italic = false;
+  console.log(actives);
+
   // console.log(activeButtonBold, activeButtonItalic);
 }
 })
