@@ -6,10 +6,6 @@
   background-color: #dfe6e9;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 .container {
   max-width: 1140px;
   margin: 0 auto;
@@ -21,21 +17,29 @@ section {
 }
 
 /*intro*/
-.cursor {
+.cursorOne {
   opacity: 0;
-  transition: .2s;
+  transition: all 0.4s;
+  font-size: 45px;
 }
 
-.cursor.active {
+.cursorOne.active {
   opacity: 1;
+  font-size: 45px;
+}
+
+.text {
+  font-size: 45px;
+  font-family: "Oxygen", sans-serif;
 }
 
 .textTwo {
-  font-size: 20px;
+  font-size: 45px;
+  font-family: "Noto Serif", sans-serif;
 }
 
 /*Editor*/
-.first p {
+.editfield {
   margin: 0;
   text-align: left;
   width: 100%;
@@ -60,8 +64,8 @@ section {
 .first {
   -ms-flex-align: center;
       align-items: center;
-  -ms-flex: 7;
-      flex: 7;
+  -ms-flex: 8;
+      flex: 8;
   border: 1px solid black;
 }
 
@@ -72,47 +76,37 @@ section {
       flex-direction: column;
   -ms-flex-align: center;
       align-items: center;
-  -ms-flex: 3;
-      flex: 3;
+  -ms-flex: 2;
+      flex: 2;
   border: 1px solid black;
 }
 
 .buttons {
-  -ms-flex: 1;
-      flex: 1;
-  padding: 20px;
   margin: 10px;
-  border: 1px solid black;
   text-align: center;
+  width: 8vw;
+  padding: 8px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  border: 1px solid black;
+  cursor: pointer;
 }
 
 button i {
   font-size: 20px;
 }
 
-/*button*/
-.btn {
-  width: 12vw;
-  padding: 8px;
-  border-radius: 5px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  border: 1px solid black;
-  font-weight: bold;
-  background: linear-gradient(90deg, #e74c3c 50%, transparent 50%);
-  background-position: 100% 0;
-  background-size: 300%;
-  transition: all 1s;
+.buttons:hover {
+  border: 1px solid #e74c3c;
+  transition: all 0.4s;
 }
 
-.btn:hover {
-  background-position: 0 100%;
-}
-
-.btn-two {
-  border: 1px solid white;
-  color: white;
+.buttons:hover i {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  color: #e74c3c;
+  transition: all 0.4s;
 }
 
 /*About me*/
@@ -140,7 +134,7 @@ footer {
   .golden {
     display: none;
   }
-  .btn {
+  .buttons {
     font-size: 10px;
   }
   .row {

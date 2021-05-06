@@ -25,17 +25,17 @@
           <div class="row">
               <div class="first">
                 <h1 class="page-subtitle">Text-editor</h1>
-                <p class="edit" contenteditable="true"></p>
+                <iframe class="editfield" name="textEditor"></iframe>
               </div>
               <div class="second">
                   <h1 class="page-subtitle">Functions</h1>
-                  <button data-cmd="bold" class="buttons btnbold btn"><i class="fas fa-bold"></i><span class"hidden">Bold</span></button>
-                  <button data-cmd="italic" class="buttons btnitalic btn"><i class="fas fa-italic"></i><span class"hidden">Italic</span></button>
-                  <button data-cmd="insertunorderedlist" class="buttons btndott btn"><i class="fas fa-list"></i><span class"hidden">Dotted list</span></button>
-                  <button data-cmd="bold" class="buttons btntojson btn"><i class="far fa-exchange-alt"></i><span class"hidden">Text -> JSON</span></button>
-                  <button data-cmd="bold" class="buttons btntotext btn"><i class="far fa-exchange-alt"></i><span class"hidden">JSON -> Text</span></button>
-                  <button data-cmd="bold" class="buttons btnsave btn"><i class="far fa-save"></i><span class"hidden"></span>Save file as...</button>
-                  <button data-cmd="bold" class="buttons btnopen btn"><i class="far fa-folder-open"></i><span class"hidden">Open file</span></button>
+                  <button data-cmd="bold" title="Bold" class="buttons"><i class="fas fa-bold"></i></button>
+                  <button data-cmd="italic" title="Italic" class="buttons"><i class="fas fa-italic"></i></button>
+                  <button data-cmd="insertunorderedlist" title="Dotted list" class="buttons"><i class="fas fa-list"></i></button>
+                  <button data-cmd="sd" title="Convert to JSON" class="buttons"><i class="fas fa-exchange-alt"></i></button>
+                  <button data-cmd="dd" title="Convert from JSON to text" class="buttons"><i class="fas fa-exchange-alt"></i></button>
+                  <button data-cmd="ff"  title="Save file as..." class="buttons"><i class="far fa-save"></i></button>
+                  <button data-cmd="hh" title="Open file..." class="buttons"><i class="far fa-folder-open"></i></button>
               </div>
           </div>
         </div>

@@ -3,18 +3,13 @@ $color-one: #e74c3c;
 $color-two: #dfe6e9;
 $font-text: 'Noto Serif', sans-serif;
 $font-header:'Oxygen', sans-serif;
-$font-three: 'Yellowtail', cursive;
-$transition: all 1s;
+$transition: all .4s;
 
 *, *::before, *::after {
 box-sizing: border-box;
 text-align: center;
 line-height: 1.7;
 background-color: $color-two;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 .container {
@@ -29,22 +24,30 @@ section {
 
 /*intro*/
 
-.cursor {
+.cursorOne {
  opacity: 0;
- transition: .2s;
+ transition: $transition;
+ font-size: 45px;
 }
 
-.cursor.active {
+.cursorOne.active {
  opacity: 1;
+ font-size: 45px;
+}
+
+.text {
+  font-size: 45px;
+  font-family: $font-header
 }
 
 .textTwo {
-  font-size: 20px;
+  font-size: 45px;
+  font-family: $font-text
 }
 
 /*Editor*/
 
-.first p {
+.editfield {
   margin: 0;
   text-align: left;
   width: 100%;
@@ -66,9 +69,8 @@ justify-content: space-between;
 }
 
 .first {
-  // max-width: 50vw;
   align-items: center;
-  flex: 7;
+  flex: 8;
   border: 1px solid black;
 }
 
@@ -76,45 +78,37 @@ justify-content: space-between;
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex: 3;
+  flex: 2;
   border: 1px solid black;
 }
 
 .buttons {
-  flex: 1;
-  padding: 20px;
   margin: 10px;
-  border: 1px solid black;
   text-align: center;
+  width: 8vw;
+  padding: 8px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  border: 1px solid black;
+  cursor: pointer;
 }
 
 button i {
   font-size: 20px;
 }
-/*button*/
 
-.btn {
-  width: 12vw;
-  padding: 8px;
-  border-radius: 5px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  border: 1px solid black;
-  font-weight: bold;
-  background: linear-gradient(90deg, $color-one 50%, transparent 50%);
-  background-position: 100% 0;
-  background-size: 300%;
+.buttons:hover {
+  border: 1px solid $color-one;
   transition: $transition;
+
 }
 
-  .btn:hover {
-    background-position: 0 100%;
-}
-
-.btn-two {
-  border: 1px solid white;
-  color: white;
+.buttons:hover i {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  color: $color-one;
+  transition: $transition;
 }
 
 
@@ -145,7 +139,7 @@ footer {
   .golden {
     display: none;
   }
-  .btn {
+  .buttons {
     font-size: 10px;
   }
   .row {

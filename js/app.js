@@ -6,15 +6,7 @@ const spnText = document.querySelector('.text');
 const spnTextTwo = document.querySelector('.textTwo');
 const txt = ['Hello Ardent Code!'];
 const txtTwo = ['Take a look at my text-editor'];
-const btnBold = document.querySelector('.btnbold');
-const btnItalic = document.querySelector('.btnitalic');
-const btnDott = document.querySelector('.btndott');
-const btnToJson = document.querySelector('.btntojson');
-const btnToText = document.querySelector('.btntotext');
-const btnSave = document.querySelector('.btnsave');
-const btnOpen = document.querySelector('.btnopen');
-const editor = document.querySelector('.edit');
-console.log(editor);
+const buttons = document.querySelectorAll('button');
 
 /*letters animation*/
 let activeLetterOne = -35;
@@ -84,68 +76,11 @@ const cursorAnimation = () => {
 }
 setInterval(cursorAnimation, 400);
 
-//addEventListeners
-let actives = {
-  text: '',
-  bold: false,
-  italic: false,
-  dott: false,
-  texttojson: false,
-  jsontotext: false,
-  save: false,
-  open: false
-}
-
-
-btnBold.addEventListener('click', () => {
-  // console.log('działa bold');
-  if(actives.bold === false){
-  editor.innerHTML = editor.textContent.bold();
-  actives.bold = true;
-  console.log(actives);
-
-} else if(actives.bold === true){
-  editor.innerHTML = editor.textContent;
-  actives.bold = false;
-  console.log(actives);
-
-}
-});
-
-btnItalic.addEventListener('click', () => {
-  // console.log('działa ital');
-  if(actives.italic === false) {
-  editor.innerHTML = editor.textContent.italics();
-  actives.italic = true;
-  console.log(actives);
-
-} else if(actives.italic === true) {
-  editor.innerHTML = editor.textContent;
-  actives.italic = false;
-  console.log(actives);
-
-  // console.log(activeButtonBold, activeButtonItalic);
-}
-})
-
-btnDott.addEventListener('click', () => {
-  console.log('działa dott');
-})
-
-btnToText.addEventListener('click', () => {
-  console.log('działa text');
-})
-
-btnToJson.addEventListener('click', () => {
-  console.log('działa json');
-})
-
-btnSave.addEventListener('click', () => {
-  console.log('działa save');
-})
-
-btnOpen.addEventListener('click', () => {
-  console.log('działa open');
-})
-
-console.log(actives);
+//addEventListener with iteration
+  textEditor.document.designMode = "On";
+  for(let i=0; i<buttons.length; i++){
+    buttons[i].addEventListener('click', () => {
+    let cmd = buttons[i].getAttribute('data-cmd');
+    textEditor.document.execCommand(cmd, false, null)
+    })
+  }
