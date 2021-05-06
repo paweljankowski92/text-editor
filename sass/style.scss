@@ -24,6 +24,24 @@ section {
 
 /*intro*/
 
+.background {
+  background-image: url(https://i.postimg.cc/mrykYRpy/astronomy.jpg);
+  width: 100vw;
+  height: 50vh;
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.splash-inner {
+    // position: absolute;
+    // width: 100%;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+}
+
 .cursorOne {
  opacity: 0;
  transition: $transition;
@@ -45,13 +63,18 @@ section {
   font-family: $font-text
 }
 
+.page-title {
+  position: relative;
+}
+
 /*Editor*/
 
 .editfield {
   margin: 0;
   text-align: left;
   width: 100%;
-  height: 89.3%;
+  // height: 89.3%;
+  height: 80%;
   padding: 30px;
   border: none;
 
