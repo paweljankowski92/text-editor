@@ -12,6 +12,10 @@ line-height: 1.7;
 background-color: $color-two;
 }
 
+body {
+  margin: 0;
+}
+
 .container {
     max-width: 1140px;
     margin: 0 auto;
@@ -22,11 +26,11 @@ section {
     padding: 50px 0;
 }
 
-/*intro*/
+/*Header */
 
 .background {
-  background-image: url(https://i.postimg.cc/mrykYRpy/astronomy.jpg);
-  width: 100vw;
+  background-image: url(https://i.postimg.cc/QCJghD44/stars-1246590-1920.jpg);
+  width: 100%;
   height: 50vh;
   position: relative;
   background-position: center center;
@@ -34,13 +38,7 @@ section {
   background-attachment: fixed;
 }
 
-.splash-inner {
-    // position: absolute;
-    // width: 100%;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
-}
+/*Intro */
 
 .cursorOne {
  opacity: 0;
@@ -63,21 +61,15 @@ section {
   font-family: $font-text
 }
 
-.page-title {
-  position: relative;
-}
-
 /*Editor*/
 
 .editfield {
   margin: 0;
   text-align: left;
   width: 100%;
-  // height: 89.3%;
   height: 80%;
   padding: 30px;
   border: none;
-
 }
 
 .page-subtitle {
@@ -123,7 +115,6 @@ button i {
 .buttons:hover {
   border: 1px solid $color-one;
   transition: $transition;
-
 }
 
 .buttons:hover i {
@@ -134,20 +125,38 @@ button i {
   transition: $transition;
 }
 
-
-/*About me*/
-
-.intro p {
-    margin: 0 auto;
-    width: 70%;
-    padding: 48px 0;
-    font-size: 20px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+.buttons a {
+  padding: 15% 35%;
 }
 
-.code {
-  font-style: italic;
+/*End*/
+
+.end p {
+  margin: 0 auto;
+  width: 70%;
+  padding: 48px 0;
+  font-size: 20px;
+  border-top: 1px solid $color-one;
+  border-bottom: 1px solid $color-one;
+}
+
+p .link {
+  position: relative;
+  text-decoration: none;
+  font-weight: normal;
+  overflow: hidden;
+  background: linear-gradient(to right, $color-one, #636e72 50%, $color-one 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
+}
+
+.link:hover {
+  background-position: 0 100%;
+  font-weight: bold;
 }
 
 /*Footer*/
@@ -157,14 +166,23 @@ footer {
   margin: 0;
 }
 
+.code {
+  font-style: italic;
+  font-size: 14px;
+}
+
 /*Media*/
+
 @media (max-width: 767px) {
-  .golden {
-    display: none;
-  }
+
   .buttons {
     font-size: 10px;
   }
+
+  .buttons a {
+    padding: 15%;
+  }
+
   .row {
     flex-direction: column;
   }
