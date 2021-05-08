@@ -4,7 +4,7 @@ const spnCursorOne = document.querySelector(".cursorOne");
 const spnCursorTwo = document.querySelector(".cursorTwo");
 const spnText = document.querySelector(".text");
 const spnTextTwo = document.querySelector(".textTwo");
-const txt = ["Hello Ardent Code!"];
+const txt = ["Hello ArdentCode!"];
 const txtTwo = ["Take a look at my text-editor"];
 const buttons = document.querySelectorAll("button");
 const btnDownload = document.getElementById("download");
@@ -68,7 +68,7 @@ const cursorAnimation = () => {
   spnCursorOne.classList.toggle("active");
   spnCursorTwo.classList.toggle("active");
   if (
-    spnText.textContent === "Hello Ardent Code!" &&
+    spnText.textContent === "Hello ArdentCode!" &&
     spnTextTwo.textContent === "Take a look at my text-editor"
   ) {
     spnCursorOne.textContent = "";
